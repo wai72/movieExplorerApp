@@ -16,13 +16,18 @@ const AppNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+      <Stack.Screen
+            name="Auth"
+            component={AuthScreen}
+            options={{ headerShown: false }}
+          />
         {/* {!user ? (
           <Stack.Screen
             name="Auth"
             component={AuthScreen}
             options={{ headerShown: false }}
           />
-        ) : ( */}
+        ) : (
           <>
             <Stack.Screen
               name="MovieList"
@@ -35,7 +40,7 @@ const AppNavigator = () => {
               options={{ title: 'Movie Details' }}
             />
           </>
-        {/* )} */}
+         )}  */}
       </Stack.Navigator>
     </NavigationContainer>
   );

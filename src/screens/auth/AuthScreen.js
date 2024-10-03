@@ -1,10 +1,11 @@
 // src/screens/AuthScreen.js
 import React from 'react';
-import { View, Button, TouchableOpacity } from 'react-native';
+import { View, Button, TouchableOpacity, StyleSheet, Text } from 'react-native';
 //import { GoogleSignin } from '@react-native-google-signin/google-signin';
 import { AccessToken, LoginManager } from 'react-native-fbsdk-next';
 import { useDispatch } from 'react-redux';
 import { setUser } from '../../store/slices/authSlice';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const AuthScreen = () => {
   const dispatch = useDispatch();
@@ -30,11 +31,59 @@ const AuthScreen = () => {
   };
 
   return (
-    <View>
-      <TouchableOpacity title="Sign in with Facebook" onPress={signInWithFacebook} />
-      {/* <Button title="Sign in with Facebook" onPress={signInWithFacebook} /> */}
+    <View style={styles.container}>
+      <Text style={styles.title}>Welcome to Movie Explorer</Text>
+      <View style={styles.iconContainer}>
+        <TouchableOpacity
+          style={styles.iconButton}
+          onPress={signInWithFacebook}
+          accessible={true}
+          accessibilityLabel="Sign in with Facebook"
+        >
+          <Icon name="facebook" size={30} color="#3b5998" />
+          <Text style={styles.buttonText}>Sign in with Facebook</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    padding: 20,
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 40,
+  },
+  iconContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '80%',
+  },
+  iconButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#f0f0f0',
+    padding: 15,
+    borderRadius: 8,
+    marginHorizontal: 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 2,
+    elevation: 2,
+  },
+  buttonText: {
+    marginLeft: 10,
+    fontSize: 16,
+    color: '#333',
+  },
+});
 
 export default AuthScreen;
