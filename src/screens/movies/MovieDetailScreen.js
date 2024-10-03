@@ -5,6 +5,7 @@ import { useGetMovieDetailsQuery } from '../../api/tmdbApi';
 import { useDispatch, useSelector } from 'react-redux';
 import { addFavorite, removeFavorite } from '../../store/slices/favoritesSlice';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { appDimension } from '../../utils/constants';
 
 const MovieDetailsScreen = ({ route, navigation }) => {
   const { movieId } = route.params;
@@ -64,7 +65,7 @@ const MovieDetailsScreen = ({ route, navigation }) => {
 
 const styles = StyleSheet.create({
   container: { alignItems: 'center', padding: 20 },
-  poster: { width: 200, height: 300, borderRadius: 10 },
+  poster: { width: appDimension.poster_detail_image_width, height: appDimension.poster_detail_image_height, borderRadius: appDimension.large_borderradius },
   info: { marginTop: 20, width: '100%' },
   title: { fontSize: 24, fontWeight: 'bold' },
   synopsis: { marginTop: 10, fontSize: 16 },

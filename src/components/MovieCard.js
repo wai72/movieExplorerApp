@@ -5,6 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 import { useDispatch, useSelector } from 'react-redux';
 import { addFavorite, removeFavorite } from '../store/slices/favoritesSlice';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { appDimension, appFontSize } from '../utils/constants';
 
 const MovieCard = ({ movie }) => {
   const navigation = useNavigation();
@@ -41,11 +42,11 @@ const MovieCard = ({ movie }) => {
 };
 
 const styles = StyleSheet.create({
-  card: { flexDirection: 'row', padding: 10, alignItems: 'center' },
-  poster: { width: 50, height: 75, borderRadius: 5 },
-  info: { flex: 1, marginLeft: 10 },
-  title: { fontSize: 16, fontWeight: 'bold' },
-  icon: { padding: 10 },
+  card: { flexDirection: 'row', padding: appDimension.normal_padding, alignItems: 'center',backgroundColor: "#fff", margin: 5, borderRadius: appDimension.normal_borderradius },
+  poster: { width: appDimension.image_width, height: appDimension.image_height, borderRadius: appDimension.normal_borderradius },
+  info: { flex: 1, marginLeft: appDimension.normal_padding , alignSelf: 'flex-start'},
+  title: { fontSize: appFontSize.large_fontSize, fontWeight: 'bold', paddingBottom: appDimension.xsmall_padding },
+  icon: { padding: appDimension.small_padding },
 });
 
 export default MovieCard;

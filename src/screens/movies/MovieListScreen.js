@@ -13,6 +13,7 @@ import MovieCard from '../../components/MovieCard';
 import { useSelector, useDispatch } from 'react-redux';
 import { setFavorites } from '../../store/slices/favoritesSlice';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { appDimension, appFontSize } from '../../utils/constants';
 
 const MovieListScreen = () => {
   const [category, setCategory] = useState('Upcoming');
@@ -78,6 +79,7 @@ const MovieListScreen = () => {
 
     return (
       <FlatList
+        style={styles.listStyle}
         data={data.results}
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => <MovieCard movie={item} />}
@@ -112,12 +114,13 @@ const MovieListScreen = () => {
 
 const styles = StyleSheet.create({
   container: { flex: 1 },
-  navBar: { flexDirection: 'row', justifyContent: 'space-around', padding: 10 },
-  navButton: { padding: 10 },
+  navBar: { flexDirection: 'row', justifyContent: 'space-around', padding: appDimension.small_padding },
+  navButton: { padding: appDimension.small_padding },
   activeButton: { borderBottomWidth: 2, borderBottomColor: 'blue' },
-  navText: { fontSize: 16 },
+  navText: { fontSize: appFontSize.large_fontSize },
   center: { flex: 1, justifyContent: 'center', alignItems: 'center' },
-  retry: { color: 'blue', marginTop: 10 },
+  retry: { color: 'blue', marginTop: appDimension.normal_padding },
+  listStyle: {margin: 4, backgroundColor: '#eeeeee'}
 });
 
 export default MovieListScreen;
