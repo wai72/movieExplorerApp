@@ -22,8 +22,6 @@ const AuthScreen = () => {
         throw 'Something went wrong obtaining access token';
       }
 
-      // Fetch user data from Facebook API if needed
-      // For simplicity, we'll just set a dummy user
       dispatch(setUser({ name: 'Yin Wai Naing', email: 'shinehtetwailay55@gmail.com' }));
     } catch (error) {
       console.error(error);
