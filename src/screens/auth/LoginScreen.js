@@ -1,4 +1,4 @@
-// src/screens/AuthScreen.js
+
 import React from 'react';
 import { View, Button, TouchableOpacity, StyleSheet, Text } from 'react-native';
 //import { GoogleSignin } from '@react-native-google-signin/google-signin';
@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux';
 import { setUser } from '../../store/slices/authSlice';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-const AuthScreen = () => {
+const LoginScreen = () => {
   const dispatch = useDispatch();
 
   const signInWithFacebook = async () => {
@@ -32,28 +32,7 @@ const AuthScreen = () => {
     <View style={styles.container}>
       <Text style={styles.title}>Welcome to Movie Explorer</Text>
       <View style={styles.iconContainer}>
-      {/* <LoginButton
-          onLoginFinished={(error, result) => {
-            if (error) {
-              console.log("login has error: " + result.error);
-            } else if (result.isCancelled) {
-              console.log("login is cancelled.");
-            } else {
-              if (Platform.OS === "ios") {
-                AuthenticationToken.getAuthenticationTokenIOS().then((data) => {
-                  console.log(data?.authenticationToken);
-                });
-              } else {
-                AccessToken.getCurrentAccessToken().then((data) => {
-                  console.log(data?.accessToken.toString());
-                });
-              }
-            }
-          }}
-          onLogoutFinished={() => console.log("logout.")}
-          loginTrackingIOS="limited"
-          nonceIOS="my_nonce" // Optional
-        /> */}
+     
         <TouchableOpacity
           style={styles.iconButton}
           onPress={signInWithFacebook}
@@ -106,4 +85,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AuthScreen;
+export default LoginScreen;

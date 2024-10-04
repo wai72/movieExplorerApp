@@ -1,9 +1,8 @@
-// src/navigation/AppNavigator.js
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import AuthScreen from '../screens/auth/AuthScreen';
+import LoginScreen from '../screens/auth/LoginScreen';
 import MovieListScreen from '../screens/movies/MovieListScreen';
 import MovieDetailsScreen from '../screens/movies/MovieDetailScreen';
 import { useSelector } from 'react-redux';
@@ -18,7 +17,7 @@ const AppNavigator = () => {
       <Stack.Navigator>
       <Stack.Screen
             name="Auth"
-            component={AuthScreen}
+            component={LoginScreen}
             options={{ headerShown: false }}
           />
         {/* {!user ? (

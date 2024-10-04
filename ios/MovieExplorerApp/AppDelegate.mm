@@ -4,6 +4,7 @@
 #import <AuthenticationServices/AuthenticationServices.h>
 #import <SafariServices/SafariServices.h>
 #import <FBSDKCoreKit/FBSDKCoreKit-Swift.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
 
 @implementation AppDelegate
 

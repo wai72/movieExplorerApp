@@ -31,6 +31,14 @@
 		<false/>
 		<key>NSAllowsLocalNetworking</key>
 		<true/>
+		<key>NSExceptionDomains</key>
+  <dict>
+   <key>localhost</key>
+   <dict>
+    <key>NSExceptionAllowsInsecureHTTPLoads</key>
+    <true/>
+   </dict>
+  </dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
@@ -75,14 +83,14 @@
   <dict>
     <key>CFBundleURLSchemes</key>
     <array>
-      <string>fb{550509010775993}</string>
+      <string>fb550509010775993</string>
     </array>
   </dict>
 </array>
 <key>FacebookAppID</key>
-<string>{550509010775993}</string>
+<string>550509010775993</string>
 <key>FacebookDisplayName</key>
-<string>{Movie Explorer}</string>
+<string>Movie Explorer</string>
 <key>LSApplicationQueriesSchemes</key>
 <array>
   <string>fbauth2</string>
