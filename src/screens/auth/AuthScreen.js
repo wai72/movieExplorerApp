@@ -2,7 +2,7 @@
 import React from 'react';
 import { View, Button, TouchableOpacity, StyleSheet, Text } from 'react-native';
 //import { GoogleSignin } from '@react-native-google-signin/google-signin';
-import { AccessToken, LoginManager } from 'react-native-fbsdk-next';
+import { AccessToken, LoginManager, LoginButton } from 'react-native-fbsdk-next';
 import { useDispatch } from 'react-redux';
 import { setUser } from '../../store/slices/authSlice';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -24,7 +24,7 @@ const AuthScreen = () => {
 
       // Fetch user data from Facebook API if needed
       // For simplicity, we'll just set a dummy user
-      dispatch(setUser({ name: 'Facebook User', email: 'fbuser@example.com' }));
+      dispatch(setUser({ name: 'Yin Wai Naing', email: 'shinehtetwailay55@gmail.com' }));
     } catch (error) {
       console.error(error);
     }
@@ -34,6 +34,28 @@ const AuthScreen = () => {
     <View style={styles.container}>
       <Text style={styles.title}>Welcome to Movie Explorer</Text>
       <View style={styles.iconContainer}>
+      {/* <LoginButton
+          onLoginFinished={(error, result) => {
+            if (error) {
+              console.log("login has error: " + result.error);
+            } else if (result.isCancelled) {
+              console.log("login is cancelled.");
+            } else {
+              if (Platform.OS === "ios") {
+                AuthenticationToken.getAuthenticationTokenIOS().then((data) => {
+                  console.log(data?.authenticationToken);
+                });
+              } else {
+                AccessToken.getCurrentAccessToken().then((data) => {
+                  console.log(data?.accessToken.toString());
+                });
+              }
+            }
+          }}
+          onLogoutFinished={() => console.log("logout.")}
+          loginTrackingIOS="limited"
+          nonceIOS="my_nonce" // Optional
+        /> */}
         <TouchableOpacity
           style={styles.iconButton}
           onPress={signInWithFacebook}

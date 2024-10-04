@@ -70,5 +70,22 @@
 		<string>Zocial.ttf</string>
 		<string>Fontisto.ttf</string>
 	</array>
+	<key>CFBundleURLTypes</key>
+<array>
+  <dict>
+    <key>CFBundleURLSchemes</key>
+    <array>
+      <string>fb{550509010775993}</string>
+    </array>
+  </dict>
+</array>
+<key>FacebookAppID</key>
+<string>{550509010775993}</string>
+<key>FacebookDisplayName</key>
+<string>{Movie Explorer}</string>
+<key>LSApplicationQueriesSchemes</key>
+<array>
+  <string>fbauth2</string>
+</array>
 </dict>
 </plist>

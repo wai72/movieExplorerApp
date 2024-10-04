@@ -25,6 +25,7 @@ const MovieCard = ({ movie }) => {
     <TouchableOpacity
       style={styles.card}
       onPress={() => navigation.navigate('MovieDetails', { movieId: movie.id })}
+      testID="heart-icon"
     >
       <Image
         source={{ uri: `https://image.tmdb.org/t/p/w500${movie.poster_path}` }}

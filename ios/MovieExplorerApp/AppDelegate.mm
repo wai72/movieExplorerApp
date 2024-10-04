@@ -14,9 +14,6 @@
   // They will be passed down to the ViewController used by React Native.
   self.initialProps = @{};
 
-   [[FBSDKApplicationDelegate sharedInstance] application:application
-                       didFinishLaunchingWithOptions:launchOptions];
-
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
 
