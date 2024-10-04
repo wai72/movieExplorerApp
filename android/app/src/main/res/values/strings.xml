@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MovieExplorerApp</string>
+    <string name="facebook_app_id">550509010775993</string>
+
 </resources>
