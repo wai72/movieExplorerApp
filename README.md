@@ -1,3 +1,7 @@
+![Simulator Screenshot - iPhone 15 Pro - 2024-10-06 at 16 16 21](https://github.com/user-attachments/assets/f6daf430-7505-403b-b613-783e8ab53bbf)
+
+![Simulator Screenshot - iPhone 15 Pro - 2024-10-06 at 16 15 24](https://github.com/user-attachments/assets/8399eb58-4679-42c0-bb4a-1d12d74584ab)
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 
