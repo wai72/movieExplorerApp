@@ -27,6 +27,7 @@ const PopularMoviesScreen = () => {
     data: popularData,
     error: popularError,
     isLoading: popularLoading,
+    isFetching: popularIsFetching,
     refetch: refetchPopular,
   } = useGetPopularMoviesQuery();
 
@@ -55,7 +56,7 @@ const PopularMoviesScreen = () => {
   }, [popularData, page]);
 
   const handleLoadMore = () => {
-    if (!po && popularData && page < popularData.total_pages) {
+    if (!popularIsFetching && popularData && page < popularData.total_pages) {
       setIsFetchingMore(true);
       setPage((prevPage) => prevPage + 1);
     }

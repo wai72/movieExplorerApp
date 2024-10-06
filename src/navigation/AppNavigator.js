@@ -12,19 +12,16 @@ import { useSelector } from 'react-redux';
 const Stack = createStackNavigator();
 
 const AppNavigator = () => {
-  const user = useSelector((state) => state.auth.user);
 
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        {/* {!user ? (
+      <Stack.Navigator initialRouteName="LoginScreen">
+          <>
           <Stack.Screen
-            name="Auth"
+            name="LoginScreen"
             component={LoginScreen}
             options={{ headerShown: false }}
           />
-        ) : ( */}
-          <>
             <Stack.Screen
               name="Main"
               component={BottomTabNavigator}
@@ -36,7 +33,6 @@ const AppNavigator = () => {
               options={{ title: 'Movie Details' }}
             />
           </>
-        {/* )} */}
       </Stack.Navigator>
     </NavigationContainer>
   );

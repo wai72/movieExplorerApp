@@ -1,15 +1,25 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { View, Button, TouchableOpacity, StyleSheet, Text } from 'react-native';
 //import { GoogleSignin } from '@react-native-google-signin/google-signin';
 import { AccessToken, LoginManager, LoginButton } from 'react-native-fbsdk-next';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setUser } from '../../store/slices/authSlice';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { useNavigation } from '@react-navigation/native'; 
 
 const LoginScreen = () => {
   const dispatch = useDispatch();
+  const navigation = useNavigation(); 
+  const user = useSelector((state) => state.auth.user);
+    // Redirect if user is already logged in
+    useEffect(() => {
+      if (user) {
+        navigation.replace('Main'); 
+      }
+    }, [user, navigation]);
 
+    
   const signInWithFacebook = async () => {
     try {
       const result = await LoginManager.logInWithPermissions(['public_profile', 'email']);
@@ -23,6 +33,8 @@ const LoginScreen = () => {
       }
 
      dispatch(setUser({ name: 'Yin Wai Naing', email: 'grace.yinwainaing@gmail.com' }));
+      // Redirect to MovieListScreen after login
+      navigation.replace('Main');
     } catch (error) {
       console.error(error);
     }
@@ -63,7 +75,7 @@ const styles = StyleSheet.create({
   iconContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    width: '80%',
+    //width: '80%',
   },
   iconButton: {
     flexDirection: 'row',
