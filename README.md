@@ -1,5 +1,6 @@
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
+
 # Getting Started
 
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
@@ -11,7 +12,11 @@ First, you will need to start **Metro**, the JavaScript _bundler_ that ships _wi
 To start Metro, run the following command from the _root_ of your React Native project:
 
 ```bash
-# using npm
+# using npm![Simulator Screenshot - iPhone 15 Pro - 2024-10-06 at 16 16 21](https://github.com/user-attachments/assets/21460f5d-9b81-4729-b760-4293b620bb86)
+![Simulator Screenshot - iPhone 15 Pro - 2024-10-06 at 16 15 24](https://github.com/user-attachments/assets/1fcdafeb-790d-46ad-aa85-d9ee0a15f8d6)
+![Uploading Simulator Screenshot - iPhone 15 Pro - 2024-10-06 at 16.16.21.png…]()
+![Simulator Screenshot - iPhone 15 Pro - 2024-10-06 at 16 15 24](https://github.com/user-attachments/assets/044067a7-7de6-4de6-a162-45c4ab2a38eb)
+
 npm start
 
 # OR using Yarn
