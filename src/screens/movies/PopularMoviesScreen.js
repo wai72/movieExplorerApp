@@ -116,10 +116,10 @@ const PopularMoviesScreen = () => {
 };
 
 const styles = StyleSheet.create({
-  container: { flex: 1, marginTop: 70},
+  container: { flex: 1, marginTop: appDimension.margin_top},
   center: { flex: 1, justifyContent: 'center', alignItems: 'center' },
   retry: { color: 'blue', marginTop: appDimension.normal_padding },
-  listStyle: { margin: 4, backgroundColor: '#eeeeee' },
+  listStyle: { margin: appDimension.xsmall_padding, backgroundColor: '#e0e0e0' },
 });
 
 export default PopularMoviesScreen;
