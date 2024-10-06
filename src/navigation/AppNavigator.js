@@ -1,10 +1,12 @@
+// src/navigation/AppNavigator.js
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import LoginScreen from '../screens/auth/LoginScreen';
-import MovieListScreen from '../screens/movies/MovieListScreen';
 import MovieDetailsScreen from '../screens/movies/MovieDetailScreen';
+import BottomTabNavigator from './BottomTabNavigator';
+
 import { useSelector } from 'react-redux';
 
 const Stack = createStackNavigator();
@@ -15,23 +17,18 @@ const AppNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-      {/* <Stack.Screen
-            name="Auth"
-            component={LoginScreen}
-            options={{ headerShown: false }}
-          /> */}
-        {!user ? (
+        {/* {!user ? (
           <Stack.Screen
             name="Auth"
             component={LoginScreen}
             options={{ headerShown: false }}
           />
-        ) : (
+        ) : ( */}
           <>
             <Stack.Screen
-              name="MovieList"
-              component={MovieListScreen}
-              options={{ title: 'Movies' }}
+              name="Main"
+              component={BottomTabNavigator}
+              options={{ headerShown: false }}
             />
             <Stack.Screen
               name="MovieDetails"
@@ -39,7 +36,7 @@ const AppNavigator = () => {
               options={{ title: 'Movie Details' }}
             />
           </>
-         )} 
+        {/* )} */}
       </Stack.Navigator>
     </NavigationContainer>
   );

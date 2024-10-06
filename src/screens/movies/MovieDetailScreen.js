@@ -8,7 +8,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import { appDimension } from '../../utils/constants';
 
 const MovieDetailsScreen = ({ route, navigation }) => {
-  const { movieId } = route.params;
+  const { movieId } = route?.params;
   const { data, error, isLoading, refetch } = useGetMovieDetailsQuery(movieId);
   const dispatch = useDispatch();
   const favorites = useSelector((state) => state.favorites.favorites);

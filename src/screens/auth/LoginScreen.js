@@ -22,7 +22,7 @@ const LoginScreen = () => {
         throw 'Something went wrong obtaining access token';
       }
 
-     //dispatch(setUser({ name: 'Yin Wai Naing', email: 'grace.yinwainaing@gmail.com' }));
+     dispatch(setUser({ name: 'Yin Wai Naing', email: 'grace.yinwainaing@gmail.com' }));
     } catch (error) {
       console.error(error);
     }
